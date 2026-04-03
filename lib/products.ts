@@ -9,30 +9,52 @@ export interface Product {
   status: ProductStatus;
   statusLabel: string;
   audience: string;
-  cta?: { label: string; href: string }[];
 }
 
-export const products: Product[] = [
+// The platform — what enables you to build
+export const platform: Product[] = [
   {
     name: "Plexo",
     tagline: "The backbone.",
     description:
-      "AI orchestration, memory, channels, agent execution, and event infrastructure for the entire Joeybuilt ecosystem. Self-hosted or SaaS. Every other Joeybuilt product is a Plexo App Profile.",
+      "AI orchestration, memory, agent execution, and event infrastructure. The shared layer that connects everything — your apps, your agents, your data. Self-host it or use the managed SaaS.",
     url: "https://getplexo.com",
     github: "joeybuilt-official/plexo",
     status: "beta",
     statusLabel: "Beta — self-host now",
     audience: "Developers",
-    cta: [
-      { label: "Self-host Plexo", href: "https://github.com/joeybuilt-official/plexo" },
-      { label: "Join the beta", href: "https://getplexo.com" },
-    ],
   },
+  {
+    name: "Koforje",
+    tagline: "The AI-native IDE.",
+    description:
+      "LSP-native, agent-capable, built for the way software is actually written now. Your agents live where your code lives. Co-creation between you and AI, not bolted-on autocomplete.",
+    url: "https://koforje.com",
+    github: "joeybuilt-official/koforje",
+    status: "spec",
+    statusLabel: "Spec complete, build imminent",
+    audience: "Developers",
+  },
+  {
+    name: "Pushd",
+    tagline: "AI-native deployment.",
+    description:
+      "From code to production with agents that understand your infrastructure. Plexo-optional — AI features activate when connected. Built for the teams that want deployment to think.",
+    url: "https://pushd.sh",
+    github: "joeybuilt-official/pushd",
+    status: "development",
+    statusLabel: "Architecture complete",
+    audience: "Developers & DevOps",
+  },
+];
+
+// Built on Plexo — proof that it works
+export const builtOnPlexo: Product[] = [
   {
     name: "Fylo",
     tagline: "Predictive personal finance.",
     description:
-      "Connects your accounts, understands your patterns, predicts your future. Intelligent recurring transaction detection, merchant enrichment, AI categorization, and Gmail-synced document extraction.",
+      "Connects your accounts, understands your patterns, predicts your future. Intelligent recurring transaction detection, merchant enrichment, AI categorization.",
     url: "https://myfylo.com",
     status: "development",
     statusLabel: "Early access",
@@ -42,7 +64,7 @@ export const products: Product[] = [
     name: "Fonto",
     tagline: "Everything flows here.",
     description:
-      "Document and digital asset management — the intake layer for the ecosystem. Receipts flow to Fylo. Knowledge artifacts flow to Nexalog. Action items flow to Plexo.",
+      "Document and digital asset management — the intake layer. Receipts flow to Fylo. Knowledge flows to Nexalog. Action items flow to Plexo.",
     url: "https://myfonto.com",
     status: "development",
     statusLabel: "In development",
@@ -69,36 +91,6 @@ export const products: Product[] = [
     statusLabel: "In development",
     audience: "Professionals",
   },
-  {
-    name: "Koforje",
-    tagline: "The AI-native IDE.",
-    description:
-      "LSP-native, agent-capable, built for the way software is actually written now. \"Ko\" evokes co-creation between developer and AI.",
-    url: "https://koforje.com",
-    github: "joeybuilt-official/koforje",
-    status: "spec",
-    statusLabel: "Spec complete, build imminent",
-    audience: "Developers",
-  },
-  {
-    name: "Pushd",
-    tagline: "AI-native deployment.",
-    description:
-      "Competes with Netlify and Coolify. Plexo-optional — AI features activate when configured. Built for the teams that want deployment to think.",
-    url: "https://pushd.sh",
-    github: "joeybuilt-official/pushd",
-    status: "development",
-    statusLabel: "Architecture complete",
-    audience: "Developers & DevOps",
-  },
-  {
-    name: "Plexo Fabric",
-    tagline: "The open extension framework.",
-    description:
-      "Individual installable units — Agents, Skills, Channels, Tools, Connectors — that extend Plexo. Community-extensible. The WordPress plugin model, rebuilt for AI-native infrastructure.",
-    url: "https://getplexo.com",
-    status: "development",
-    statusLabel: "In development",
-    audience: "Developers & ecosystem contributors",
-  },
 ];
+
+export const allProducts = [...platform, ...builtOnPlexo];

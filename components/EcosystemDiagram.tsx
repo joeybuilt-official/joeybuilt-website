@@ -9,14 +9,12 @@ interface AppNode {
 }
 
 const apps: AppNode[] = [
-  { name: "Fylo", status: "development", angle: 0 },
-  { name: "Fonto", status: "development", angle: 45 },
-  { name: "Nexalog", status: "development", angle: 90 },
-  { name: "Levio", status: "development", angle: 135 },
-  { name: "Koforje", status: "spec", angle: 180 },
-  { name: "Pushd", status: "development", angle: 225 },
-  { name: "Fabric", status: "development", angle: 270 },
-  { name: "Boost", status: "beta", angle: 315 },
+  { name: "Fylo", status: "development", angle: 30 },
+  { name: "Fonto", status: "development", angle: 90 },
+  { name: "Nexalog", status: "development", angle: 150 },
+  { name: "Levio", status: "development", angle: 210 },
+  { name: "Koforje", status: "spec", angle: 270 },
+  { name: "Pushd", status: "development", angle: 330 },
 ];
 
 const statusColor: Record<string, string> = {
@@ -40,7 +38,6 @@ export function EcosystemDiagram() {
     const nodes = svg.querySelectorAll<SVGGElement>("[data-node]");
     const center = svg.querySelector<SVGGElement>("[data-center]");
 
-    // Animate center first
     if (center) {
       center.style.opacity = "0";
       center.style.transform = "scale(0.8)";
@@ -52,7 +49,6 @@ export function EcosystemDiagram() {
       });
     }
 
-    // Then lines
     lines.forEach((line, i) => {
       line.style.opacity = "0";
       line.style.transition = `opacity 0.4s ease ${0.3 + i * 0.08}s`;
@@ -61,7 +57,6 @@ export function EcosystemDiagram() {
       });
     });
 
-    // Then nodes
     nodes.forEach((node, i) => {
       node.style.opacity = "0";
       node.style.transform = "scale(0.85)";
@@ -79,14 +74,17 @@ export function EcosystemDiagram() {
   const radius = 200;
 
   return (
-    <div className="mx-auto w-full max-w-[600px]" role="img" aria-label="Plexo ecosystem diagram showing eight app profiles radiating from the Plexo core">
+    <div
+      className="mx-auto w-full max-w-[600px]"
+      role="img"
+      aria-label="Plexo ecosystem diagram showing six products radiating from the Plexo core"
+    >
       <svg
         ref={svgRef}
         viewBox="0 0 600 600"
         className="w-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Connection lines */}
         {apps.map((app, i) => {
           const rad = (app.angle * Math.PI) / 180;
           const x = cx + radius * Math.cos(rad);
@@ -106,9 +104,15 @@ export function EcosystemDiagram() {
           );
         })}
 
-        {/* Plexo center */}
         <g data-center="">
-          <circle cx={cx} cy={cy} r={48} fill="#22262e" stroke="#7eb8c9" strokeWidth="2" />
+          <circle
+            cx={cx}
+            cy={cy}
+            r={48}
+            fill="#22262e"
+            stroke="#7eb8c9"
+            strokeWidth="2"
+          />
           <text
             x={cx}
             y={cy - 6}
@@ -127,7 +131,6 @@ export function EcosystemDiagram() {
           </text>
         </g>
 
-        {/* App nodes */}
         {apps.map((app, i) => {
           const rad = (app.angle * Math.PI) / 180;
           const x = cx + radius * Math.cos(rad);
@@ -136,7 +139,14 @@ export function EcosystemDiagram() {
 
           return (
             <g key={i} data-node="">
-              <circle cx={x} cy={y} r={32} fill="#22262e" stroke={color} strokeWidth="1.5" />
+              <circle
+                cx={x}
+                cy={y}
+                r={32}
+                fill="#22262e"
+                stroke={color}
+                strokeWidth="1.5"
+              />
               <text
                 x={x}
                 y={y + 1}
@@ -151,8 +161,15 @@ export function EcosystemDiagram() {
           );
         })}
 
-        {/* Pulse ring on Plexo core */}
-        <circle cx={cx} cy={cy} r={48} fill="none" stroke="#7eb8c9" strokeWidth="1" opacity="0.3">
+        <circle
+          cx={cx}
+          cy={cy}
+          r={48}
+          fill="none"
+          stroke="#7eb8c9"
+          strokeWidth="1"
+          opacity="0.3"
+        >
           <animate
             attributeName="r"
             from="48"

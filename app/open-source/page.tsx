@@ -100,23 +100,6 @@ export default function OpenSourcePage() {
           </div>
 
           <h2 className="mt-16 font-[family-name:var(--font-mono)] text-2xl font-bold text-base-100">
-            Plexo Fabric
-          </h2>
-          <div className="mt-6 max-w-2xl space-y-4 text-base-400">
-            <p>
-              Fabric is the extension framework. Agents, Skills, Channels,
-              Tools, and Connectors — individually installable units that extend
-              Plexo. Think WordPress plugins, rebuilt for AI-native
-              infrastructure.
-            </p>
-            <p>
-              The Fabric SDK will be available alongside the SaaS launch.
-              Community contributions are the long-term vision — the ecosystem
-              gets more capable as more people build on it.
-            </p>
-          </div>
-
-          <h2 className="mt-16 font-[family-name:var(--font-mono)] text-2xl font-bold text-base-100">
             Contributing
           </h2>
           <div className="mt-6 max-w-2xl text-base-400">

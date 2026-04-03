@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { ProductCard } from "@/components/ProductCard";
-import { products } from "@/lib/products";
+import { platform, builtOnPlexo } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Eight interconnected products — finance, knowledge, productivity, development tools — all powered by Plexo.",
+    "The platform that lets you build software with AI agents — plus the products we built to prove it works.",
 };
 
 export default function ProductsPage() {
@@ -16,15 +16,31 @@ export default function ProductsPage() {
           Products
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-base-400">
-          Every product is a Plexo App Profile — sharing identity,
-          infrastructure, and intelligence through a single backbone. They are
-          not separate apps bolted together. They are one system.
+          Three tools to build with. Four products that prove it works.
+          Everything runs on Plexo &mdash; the shared backbone that connects
+          your apps, agents, and data.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          {products.map((p) => (
-            <ProductCard key={p.name} product={p} />
-          ))}
+        <div className="mt-16">
+          <p className="font-[family-name:var(--font-mono)] text-sm uppercase tracking-widest text-accent-500">
+            The platform
+          </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {platform.map((p) => (
+              <ProductCard key={p.name} product={p} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <p className="font-[family-name:var(--font-mono)] text-sm uppercase tracking-widest text-accent-500">
+            Built on Plexo
+          </p>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {builtOnPlexo.map((p) => (
+              <ProductCard key={p.name} product={p} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
