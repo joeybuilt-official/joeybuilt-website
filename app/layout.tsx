@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Joeybuilt — One person. Eight products. One backbone.",
+    default: "Joeybuilt — Build what you imagine.",
     template: "%s — Joeybuilt",
   },
   description:
