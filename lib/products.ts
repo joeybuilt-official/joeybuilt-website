@@ -9,6 +9,7 @@ export interface Product {
   status: ProductStatus;
   statusLabel: string;
   audience: string;
+  hasLiveSite?: boolean;
 }
 
 // The platform — what enables you to build
@@ -23,6 +24,7 @@ export const platform: Product[] = [
     status: "beta",
     statusLabel: "Beta — self-host now",
     audience: "Developers",
+    hasLiveSite: true,
   },
   {
     name: "Koforje",
@@ -59,6 +61,7 @@ export const builtOnPlexo: Product[] = [
     status: "development",
     statusLabel: "Early access",
     audience: "Consumers",
+    hasLiveSite: true,
   },
   {
     name: "Fonto",
@@ -90,6 +93,7 @@ export const builtOnPlexo: Product[] = [
     status: "development",
     statusLabel: "In development",
     audience: "Professionals",
+    hasLiveSite: true,
   },
 ];
 
