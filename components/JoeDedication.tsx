@@ -44,7 +44,7 @@ export function JoeDedication() {
 
         <div className="mt-10 space-y-5 text-base-300">
           <p>
-            Joseph &ldquo;Joe&rdquo; Ipsen was a self-taught engineer. He built
+            Joe &ldquo;Joey&rdquo; Ipson was a self-taught engineer. He built
             things that mattered to real people &mdash; projects with active
             communities, built with TypeScript, care for the user experience. He
             worked from home so he could be present with his kids. He was

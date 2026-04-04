@@ -10,15 +10,15 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-6 pb-12 pt-24 md:pb-20 md:pt-36">
           <h1 className="max-w-4xl font-[family-name:var(--font-mono)] text-4xl font-bold leading-tight tracking-tight text-base-50 md:text-6xl">
-            One founder and a team of agents
+            Your apps should
             <br />
-            <span className="text-accent-500">built all of this.</span>
+            <span className="text-accent-500">actually talk to each other.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-base-400 md:text-xl">
-            Now we&apos;re building the tools so you can do it too. An IDE that
-            thinks with you. A backbone that runs your agents. A deploy platform
-            that gets out of the way. Everything you need to go from idea to
-            shipped product &mdash; with AI that actually participates.
+            Finance, docs, knowledge, email, tasks &mdash; connected at
+            the root instead of duct-taped at the edges. Joeybuilt apps
+            share data, share intelligence, and get smarter the more you
+            use them.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
@@ -33,7 +33,7 @@ export default function Home() {
               href="/products"
               className="inline-flex items-center gap-2 rounded-lg border border-base-700 px-5 py-2.5 font-[family-name:var(--font-mono)] text-sm font-medium text-base-200 transition-colors hover:border-base-500 hover:text-base-50"
             >
-              See what we&apos;re building
+              See the products
             </Link>
           </div>
         </div>
@@ -44,14 +44,14 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mb-12 text-center">
             <h2 className="font-[family-name:var(--font-mono)] text-2xl font-bold text-base-100 md:text-3xl">
-              One backbone. Everything connected.
+              One engine. Zero duct tape.
             </h2>
             <p className="mt-3 text-base-400">
-              Plexo is the shared infrastructure layer. Your apps, your agents,
-              your data &mdash;
+              Plexo connects your apps, agents, and data at the
+              infrastructure level &mdash;
               <br className="hidden md:block" />
-              all running on the same foundation. Not bolted together.
-              Integrated.
+              not through brittle integrations. One foundation. Everything
+              flows.
             </p>
           </div>
           <EcosystemDiagram />
@@ -65,12 +65,11 @@ export default function Home() {
             The platform
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-mono)] text-2xl font-bold text-base-100 md:text-3xl">
-            Everything you need to build
+            The stack under the stack
           </h2>
           <p className="mt-3 max-w-2xl text-base-400">
-            An AI backbone, a code editor, and a deploy platform. Three tools
-            that work together so you can build real software with agents at
-            every layer.
+            AI engine. Code editor. Deploy platform. Three tools that
+            handle the infrastructure so you can focus on the product.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {platform.map((p) => (
@@ -87,12 +86,12 @@ export default function Home() {
             Built on Plexo
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-mono)] text-2xl font-bold text-base-100 md:text-3xl">
-            We use our own tools
+            Apps that fix real problems
           </h2>
           <p className="mt-3 max-w-2xl text-base-400">
-            Four products &mdash; finance, documents, knowledge, productivity
-            &mdash; all built by one person using the same platform we&apos;re
-            giving you. This is the proof that it works.
+            Finance, documents, knowledge, productivity &mdash; each one
+            built to replace a broken workflow. Together, they replace the
+            mess of disconnected tools running your digital life.
           </p>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             {builtOnPlexo.map((p) => (
@@ -106,12 +105,13 @@ export default function Home() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="font-[family-name:var(--font-mono)] text-3xl font-bold text-base-100 md:text-4xl">
-            What will you build?
+            Stop managing tools.
+            <br />
+            Start getting things done.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-base-400">
-            The tools that let one person build an ecosystem of products are
-            becoming the tools that let anyone build anything. Start with Plexo.
-            See where it takes you.
+            Plexo is open source and ready to run. The apps are rolling out
+            now. Pick the problem you want solved first.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
@@ -145,7 +145,14 @@ export default function Home() {
             >
               Dustin Olenslager
             </Link>
-            . Named for someone who showed him what building means.
+            . Named for{" "}
+            <Link
+              href="/about"
+              className="text-base-300 underline underline-offset-4 transition-colors hover:text-accent-400"
+            >
+              Joe &ldquo;Joey&rdquo; Ipson
+            </Link>
+            .
           </p>
         </div>
       </section>

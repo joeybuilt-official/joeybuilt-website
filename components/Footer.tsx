@@ -9,9 +9,9 @@ export function Footer() {
           <div className="md:col-span-1">
             <Logo className="text-lg" />
             <p className="mt-3 text-sm text-base-500">
-              One person. Eight products.
+              Eight products. One engine.
               <br />
-              One backbone.
+              All connected.
             </p>
           </div>
 

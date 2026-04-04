@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s — Joeybuilt",
   },
   description:
-    "A solo-founded software company building interconnected open-source SaaS products, all powered by Plexo.",
+    "Interconnected apps for your finances, docs, knowledge, and productivity — all powered by Plexo.",
   metadataBase: new URL("https://joeybuilt.com"),
   openGraph: {
     type: "website",

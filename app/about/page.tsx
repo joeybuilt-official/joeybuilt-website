@@ -4,7 +4,7 @@ import { JoeDedication } from "@/components/JoeDedication";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Built by Dustin Olenslager. Named for Joe Ipsen — a self-taught engineer who showed what building with care looks like.",
+    'Built by Dustin Olenslager. Named for Joe "Joey" Ipson — a self-taught engineer who solved real problems and shipped real things.',
 };
 
 export default function AboutPage() {
